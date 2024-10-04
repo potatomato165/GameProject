@@ -19,7 +19,14 @@ public class PlayerController : MonoBehaviour
     private float input;
     void Update()
     {
-        input = Input.GetAxis("Horizontal");
+        if(GameManager.isAction)
+        {
+            input = 0;
+        }
+        else
+        {
+            input = Input.GetAxis("Horizontal");
+        }
         if(input != 0)
         {
             if(input > 0)
@@ -38,9 +45,13 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isWalk", false);
         }
         npc = GameObject.FindWithTag("NPC");
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.Space) && GameManager.isAction)
         {
-            gm.Action(npc);
+            gm.Talk();
         }
+    }
+    public void Conversationstart()
+    {
+        gm.Action(npc);
     }
 }

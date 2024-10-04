@@ -9,13 +9,13 @@ public class CamController : MonoBehaviour
     void Start()
     {
         transform.position = player.transform.position;
-        transform.position = transform.position + new UnityEngine.Vector3(0,2,-10);
+        transform.position = transform.position + new UnityEngine.Vector3(3,2,-10);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = player.transform.position;
-        transform.position = transform.position + new UnityEngine.Vector3(0,2,-10);
+        transform.position = transform.position + new UnityEngine.Vector3(3,2,-10);
     }
 }

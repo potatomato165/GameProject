@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject talkpanel;
     public TextMeshProUGUI talktext;
     public GameObject NPC;
-    public bool isAction;
+    public static bool isAction;
     public TalkManager tm;
+    public int id;
     public int talkindex = 0;
     void Awake()
     {
@@ -27,15 +28,17 @@ public class GameManager : MonoBehaviour
     {
         NPC = npc;
         NPCdata npcdata = NPC.GetComponent<NPCdata>();
-        Talk(npcdata.id);
+        id = npcdata.id;
+        Talk();
         talkpanel.SetActive(isAction);
     }
-    public void Talk(int id)
+    public void Talk()
     {
         string line = tm.GetLine(id, talkindex);
         if(line == null)
         {
             isAction = false;
+            talkpanel.SetActive(isAction);
             talkindex = 0;
             return;
         }
