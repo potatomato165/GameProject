@@ -37,26 +37,10 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalk", false);
         }
-    }
-
-
-    private Vector2 dir;
-    private void FixedUpdate() 
-    {
-        if(Input.GetAxis("Horizontal") != 0)
+        npc = GameObject.FindWithTag("NPC");
+        if(Input.GetKeyDown(KeyCode.P))
         {
-            dir = new Vector2(Input.GetAxis("Horizontal"),0).normalized;
-        }
-        Debug.DrawRay(rb.position, dir, Color.green);
-        RaycastHit2D rayhit = Physics2D.Raycast(rb.position, dir, 5f, LayerMask.GetMask("NPC"));
-        if (rayhit.collider != null)
-        {
-            npc = rayhit.collider.gameObject;
-        
-            if(Input.GetKeyDown(KeyCode.P))
-            {
-                gm.Action(npc);
-            }
+            gm.Action(npc);
         }
     }
 }
