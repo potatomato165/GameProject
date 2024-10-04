@@ -8,7 +8,7 @@ public class trigger : MonoBehaviour
     public float targetSize = 10f; // 목표 확대 크기
     public float zoomSpeed = 5f; // 확대 속도
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
         StartCoroutine(ZoomOut());
