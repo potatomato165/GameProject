@@ -54,4 +54,8 @@ public class PlayerController : MonoBehaviour
     {
         gm.Action(npc);
     }
+    public void FindGM()
+    {
+        gm = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+    }
 }

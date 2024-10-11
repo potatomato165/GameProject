@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Justice.unity
+    guid: 7fdf297b247a248ea95701b9b131bb7e
+  - enabled: 1
+    path: Assets/Scenes/Love.unity
+    guid: fd88584192bcb4e2dad73f21b4666df6
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 72391faf007134e618c56f1b0f063c12
   m_configObjects: {}
