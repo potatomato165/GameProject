@@ -49144,9 +49144,13 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 4446
     m_Data: {fileID: 11400000, guid: 88136e2997cf3ed4f8559179703961d5, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 4446
     m_Data: {fileID: 21300000, guid: df428d9efbb87594ea2483178fbf1cf8, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 4446
     m_Data:
