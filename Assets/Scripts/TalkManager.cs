@@ -29,7 +29,7 @@ public class TalkManager : MonoBehaviour
                 // 다음 줄 읽기
                 value = reader.ReadLine();
             }
-            reader.Close();        
+            reader.Close();
         }
         else
         {
@@ -41,7 +41,7 @@ public class TalkManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         Number = new Dictionary<int, List<string>>();
-        GenerateData();  // 예시로 ID 1번 호출, 필요에 따라 수정 가능
+        GenerateData();
     }
 
     void GenerateData()
