@@ -7,7 +7,7 @@ public class StartScene : MonoBehaviour
 {
     public void Startbutton()
     {
-        SceneManager.LoadScene("");
+        LoadingSceneController.LoadScene("Justice");
     }
     public void Quit()
     {

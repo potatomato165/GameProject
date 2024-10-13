@@ -12,10 +12,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] SpriteRenderer sr;
     [SerializeField] GameManager gm;
     private GameObject npc;
-    void Start()
-    {
-
-    }
     private float input;
     void Update()
     {
@@ -47,7 +43,11 @@ public class PlayerController : MonoBehaviour
         npc = GameObject.FindWithTag("NPC");
         if(Input.GetKeyDown(KeyCode.Space) && GameManager.isAction)
         {
-            gm.Talk();
+            if(!GameManager.isListening)
+            {
+                gm.Talk();
+            }
+
         }
     }
     public void Conversationstart()
@@ -57,5 +57,9 @@ public class PlayerController : MonoBehaviour
     public void FindGM()
     {
         gm = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+    }
+    public void Stopplayer()
+    {
+        rb.velocity = new Vector3(0,0,0);
     }
 }

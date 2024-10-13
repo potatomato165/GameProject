@@ -59,4 +59,8 @@ public class TalkManager : MonoBehaviour
         }
         return null; // 인덱스가 범위를 벗어나면 null 반환
     }
+    public void DestroyTalk()
+    {
+        Destroy(gameObject);
+    }
 }
